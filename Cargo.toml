@@ -1,0 +1,22 @@
+[package]
+name = "pipitor-websub-proxy"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow = "1"
+atom = { package = "atom_syndication", version = "0.12.2", default-features = false }
+bytes = "1"
+chrono = { version = "0.4", features = ["clock"] }
+futures-util = "0.3"
+http = "0.2"
+http-body = "1.0.0-rc.2"
+http-body-util = "0.1.0-rc.3"
+hyper = { version = "1.0.0-rc.4", features = ["client", "http1", "http2", "server"] }
+listenfd = "0.3"
+pin-project-lite = "0.2"
+tokio = { version = "1", features = ["macros", "net", "rt-multi-thread", "time"] }
+tokio-native-tls = "0.3"
+tracing = { version = "0.1", features = ["attributes"] }
+tracing-subscriber = "0.3"
